@@ -13,9 +13,9 @@ def startpy():
 
 
     call = client.calls.create(
-                            url='http://demo.twilio.com/docs/voice.xml',
-                            to=FROM_Number,
-                            from_=TO_NUMBER
+                            twiml='<Response><Say>Ahoy, World!</Say></Response>',
+                            to=TO_NUMBER,
+                            from_=FROM_Number
                         )
 
     print(call.sid)
