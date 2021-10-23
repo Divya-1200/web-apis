@@ -1,9 +1,11 @@
 import requests, json
+from decouple import config
 
 BASE_URL = "https://api.openweathermap.org/data/2.5/weather?"
 
-CITY = "Hyderabad"
-API_KEY = "12b9af6c1daea22bfdb6e498a60f9e17"
+CITY = "Canada"
+API_KEY = config('API_KEY')
+print(API_KEY)
 
 URL = BASE_URL + "q=" + CITY + "&appid=" + API_KEY
 
