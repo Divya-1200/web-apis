@@ -7,7 +7,6 @@ API_KEY = config('API_KEY')
 print(API_KEY)
 
 
-
 def run():
   try:
     mailchimp = MailchimpTransactional.Client('API_KEY')
@@ -19,4 +18,6 @@ def run():
   except ApiClientError as error:
     print('An exception occurred: {}'.format(error.text))
 
-run()
+
+if __name__ == "__main__":
+  run()
