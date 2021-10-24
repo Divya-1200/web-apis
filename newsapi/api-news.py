@@ -2,16 +2,14 @@ import requests, json
 from decouple import config
 
 BASE_URL = "https://newsapi.org/v2/everything?"
-MAIN_URL = "https://newsapi.org/v2/everything?q=amazon&apiKey=d508fa3f20734bc98e6d76bad2a95e9b"
-NEWS = "bitcoin"
+
+NEWS = "amazon"
 API_KEY = config('API_KEY')
 print(API_KEY)
 
 URL = BASE_URL + "q=" + NEWS + "&apiKey=" + API_KEY
 print(URL)
 
-if (URL == MAIN_URL):
-    print("im here")
 response = requests.get(URL)
 
 if response.status_code == 200:
